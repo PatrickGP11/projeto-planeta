@@ -13,6 +13,8 @@ body {
 }
 
 .cabecalho {
+
+    animation: transition-cabecalho 1s linear;
     display: flex;
     justify-content: space-between;
     padding: 40px 80px;
@@ -52,30 +54,36 @@ body {
             }
 
             & button:last-child {
+                animation: transition-title 1s linear;
                 color: #4ABBC2;
                 background: transparent;
                 border: 2px solid #4ABBC2;
             }
 
             & p:first-child {
+                animation: transition-title 1s linear;
                 color: #FF2323;
                 font-size: 24px;
                 font-weight: 600;
             }
 
             & h1{
+                animation: transition-title 1s linear;
                 font-size: 40px;
                 
             }
 
             & p:last-child {
+                animation: transition-title 1s linear;
                 font-size: 18px;
             }
         }
         & .btns {
             display: flex;
             gap: 16px;
+
             & button {
+                animation: transition-title 1s linear;
                 padding: 14px 20px;
                 border-radius: 16px;
                 font-size: 18px;
@@ -96,6 +104,7 @@ body {
         }
 
         & img {
+            animation: transition-img 1s linear;
             width: 500px;
             margin: auto;
         }
@@ -112,5 +121,23 @@ body {
         & .menu {
             display: flex;
         }
+    }
+}
+
+@keyframes transition-title {
+    0% {
+        transform: translateX(-100px);
+    }
+}
+
+@keyframes transition-img {
+    0% {
+        transform: translateZ(-100px);
+    }
+}
+
+@keyframes transition-cabecalho {
+    0% {
+        transform: translateY(-100px);
     }
 }
